@@ -77,7 +77,7 @@ app.delete("/api/restaurants/:id", (req,res) => {
 
 // ************* Initialize the Service & Start the Server
 
-// invoke the db.initialize() method and only start the server once it has succeeded, otherwise we should show the error message 
+// invoke the db.initialize() method and only start the server once it has succeeded,  otherwise we should show the error message 
 
 db.initialize().then(()=>{
     app.listen(HTTP_PORT, ()=>{
