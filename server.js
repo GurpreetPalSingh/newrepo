@@ -86,17 +86,3 @@ db.initialize().then(()=>{
 }).catch((err)=>{
     console.log(err);
 });
-
-
-// get all
-// app.get("/api/items", (req, res) => {
-//     res.json({ message: `API Listening: ${req.params.id}` });
-// });
-
-// tell the app to start listening 
-
-// app.listen(HTTP_PORT, () => {console.log(
-//     "Ready to handle requests on port " + HTTP_PORT
-// )})
-
-
