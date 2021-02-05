@@ -4,6 +4,7 @@
 
 const express = require("express")
 const cors = require("cors");
+const path = require("path")
 const bodyParser = require('body-parser');
 const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
@@ -16,6 +17,9 @@ app.use(cors());
 
 // ************* API Routes
 
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 // POST /api/restaurants -- This route uses the body of the request to add a new "Restaurant" document to the collection 
 app.post("/api/restaurants", (req,res) => {
     db.addNewRestaurant(req.body)
