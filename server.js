@@ -60,7 +60,7 @@ app.get("/api/restaurants/:id", (req,res) => {
 });
 
 
-// PUT /api/restaurants -- This route must accept a numeric route parameter that represents the _id of the desired restaurant object, ie: /api/restaurants/5eb3d668b31de5d588f4292e as well as read the contents of the request body
+// PUT /api/restaurants -- This route must accept a numeric route parameter that represents the _id of the desired restaurant object, ie: /api/restaurants/5eb3d668b31de5d588f4292e as well as read the contents of the request body.
 app.put("/api/restaurants/:id", (req,res) => {
     db.updateRestaurantById(req.body, req.params.id)
         .then(() => {
