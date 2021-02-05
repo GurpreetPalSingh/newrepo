@@ -1,5 +1,13 @@
-// Assignment 1 
-// Setup web service!
+/*********************************************************************************
+*  WEB422 – Assignment 1
+*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  
+*  No part of this assignment has been copied manually or electronically from any other source
+*  (including web sites) or distributed to other students.
+* 
+*  Name: Gurpreet Singh Student ID: 074913146 Date: Jan 22/2020
+*  Heroku Link: https://agile-earth-14436.herokuapp.com
+*
+********************************************************************************/ 
 
 
 const express = require("express")
@@ -56,7 +64,7 @@ app.get("/api/restaurants/:id", (req,res) => {
 });
 
 
-// PUT /api/restaurants -- This route must accept a numeric route parameter that represents the _id of the desired restaurant object, ie: /api/restaurants/5eb3d668b31de5d588f4292e as well as read the contents of the request body
+// PUT /api/restaurants -- This route must accept a numeric route parameter that represents the _id of the desired restaurant object, ie: /api/restaurants/5eb3d668b31de5d588f4292e as well as read the contents of the request body.
 app.put("/api/restaurants/:id", (req,res) => {
     db.updateRestaurantById(req.body, req.params.id)
         .then(() => {
@@ -81,7 +89,7 @@ app.delete("/api/restaurants/:id", (req,res) => {
 
 // ************* Initialize the Service & Start the Server
 
-// invoke the db.initialize() method and only start the server once it has succeeded, otherwise we should show the error message 
+// invoke the db.initialize() method and only start the server once it has succeeded,  otherwise we should show the error message 
 
 db.initialize().then(()=>{
     app.listen(HTTP_PORT, ()=>{
